@@ -5,24 +5,28 @@ void main() {
   double sum = 0;
   int invalidCount = 0; 
   int totalAttempts = 0; 
-
-  print("Enter 10 positive numbers:");
+  print("Enter 10 positive numbers (only > 0):");
 
   while (positiveCount < 10) {
     totalAttempts++; 
-    double number = double.parse(stdin.readLineSync()!);
-    if (number > 0) {
-      sum += number;
-      positiveCount++;
-    } else {
+    double? number = double.tryParse(stdin.readLineSync()!);
+    if (number == null) {
+      print("Invalid input. Please enter a number.");
       invalidCount++;
-      print("Please enter a positive number. Try again.");
+      continue;
     }
+    if (number <= 0) {
+      print("Number must be positive.");
+      invalidCount++;
+      continue;
+    }
+    sum += number;
+    positiveCount++;
   }
 
   print("----------------------------------------------------");
   print("--- final results ---");
-  print("The sum of 10 positive numbers is: $sum");
+  print("Sum: ${sum.toStringAsFixed(2)}");
   print("Total attempts: $totalAttempts");
   print("Invalid attempts: $invalidCount");
 }
