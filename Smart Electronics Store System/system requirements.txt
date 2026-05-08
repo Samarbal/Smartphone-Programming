@@ -1,0 +1,76 @@
+Smart Electronics Store System
+Project Requirements
+
+This project is developed using Dart language and simulates a simple smart electronics store system.
+
+The system should support the following features:
+
+1. Device Management
+
+* Add new devices
+* Remove devices
+* Search for devices
+* Display all devices
+* Update device prices
+
+2. Device Types
+   The system supports different device categories:
+
+* Phones
+* Laptops
+* Accessories
+
+3. Customer Management
+
+* Add customers
+* Display customers
+* Find customer by name
+
+4. Purchase System
+   Customers can:
+
+* Buy available devices
+* View their purchase history
+
+The system should:
+
+* Check if the device exists
+* Check available stock quantity
+* Check customer balance before purchase
+* Update stock and balance after successful purchase
+
+5. Purchase History
+
+* Store all completed purchase operations
+* Display all purchases
+* Display purchases for a specific customer
+
+6. User Interface
+
+* Menu-driven console interface
+* Separate manager and customer menus
+
+7. Validation and Error Handling
+   The program should validate:
+
+* Empty inputs
+* Invalid numbers
+* Invalid indexes
+* Insufficient stock
+* Insufficient balance
+
+8. Asynchronous Operation
+   The project should simulate delay during purchase operations using:
+
+* Future.delayed()
+* async / await
+
+9. OOP Concepts Used
+   The project applies:
+
+* Classes and Objects
+* Inheritance
+* Abstraction
+* Polymorphism
+* Named Parameters
+* Lists and Maps
